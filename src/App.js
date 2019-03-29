@@ -17,15 +17,20 @@ class App extends Component {
       day: {
         avghumidity: '',
         maxtemp_f: '',
-        mintemp_f: ''
+        mintemp_f: '',
+        condition: {
+          icon: ''
+        }
       }
     }),
     current: {
       cloud: '',
       gust_mph: '',
       humidity: '',
+      temp_f: '',
       condition: {
-        text: ''
+        text: '',
+        icon: ''
       }
     },
     data: undefined,
@@ -97,6 +102,15 @@ class App extends Component {
     console.log(day);
     return day;
   }
+  
+    //utility function to display icon only if it is available
+  getIcon = (icon) => {
+    if(icon){
+      return (
+          <img className = "image is-96x96" src = {icon} alt = "weather icon"></img>
+      )
+    }
+  }
 
   render() {
     return (
@@ -116,6 +130,7 @@ class App extends Component {
             forecast = {this.state.forecast}
             current = {this.state.current}
             getDay = {this.getDayOfWeek}
+            getIcon = {this.getIcon}
           />
           
         </div>
