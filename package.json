@@ -2,7 +2,7 @@
   "name": "weather-2.0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://joshuaadesign/weather-2.0",
+  "homepage": "https://joshuaadesign.com",
   "dependencies": {
     "bulma": "^0.7.4",
     "gh-pages": "^2.0.1",
