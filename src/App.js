@@ -45,7 +45,7 @@ class App extends Component {
       //api key
     let key = '2fe2d49a1b7849138f2153622192803';
       //fetches data
-    fetch(`https:api.apixu.com/v1/forecast.json?key=${key}&q=${e.target.value}&days=7`)
+    fetch(`https://api.apixu.com/v1/forecast.json?key=${key}&q=${e.target.value}&days=7`)
         //throws error if invalid
       .then((readableStream) => {
         if (readableStream.ok) {
